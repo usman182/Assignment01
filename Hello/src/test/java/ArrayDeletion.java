@@ -13,7 +13,7 @@ public class ArrayDeletion{
 
         //shift elements towards left from last element till indextodeleteAt.
         for(int i=indextodeleteAt; i<array.length-1; i++){
-            array[i]=array[i+1];
+            array[i]=array[i+1];	
         }
         array[array.length-1] = -1;
         return array;
