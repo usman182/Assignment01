@@ -3,6 +3,7 @@ import org.junit.Test;
 
 class QueueWithLinkedListTest 
 {
+	QueueWithLinkedList queue = new QueueWithLinkedList();
 
     @Test
     public void test() {
