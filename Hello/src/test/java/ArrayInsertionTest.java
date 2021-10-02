@@ -2,8 +2,6 @@ import org.junit.*;
 import org.junit.Test;
 
 
-
-
 public class ArrayInsertionTest 
 {
 	int [] M_array;
@@ -45,10 +43,10 @@ public class ArrayInsertionTest
 		
 	}
 	
-	/*@Test
+	@Test
 	public void PassingArrayInsert2()
 	{
-		int [] array = new int[10];
+		//int [] array = new int[10];
 		ArrayInsertion.insert(array, 1, 0);
 		ArrayInsertion.insert(array, 5, 1);
 		ArrayInsertion.insert(array, 4, 2);
@@ -61,45 +59,8 @@ public class ArrayInsertionTest
 		int [] expectedArray = {1,5,4,7,2,0,0,0,0,0};
 		Assert.assertArrayEquals(expectedArray, array);
 		
-	}*/
-	
-	/*@Test
-	public void PassingArrayInsert2()
-	{
-		ArrayInsertion.insert(array, 5, 2);
-		int [] expectedArray = {1,0,5,0,0,0,0,0,0,0};
-		Assert.assertArrayEquals(expectedArray, array);
-		
 	}
-	*/
 	
-/*	@Test
-	public void FailingArrayInsert()
-	{
-		int [] array = {1,5,4,7,2,0,0,0,0,0};
-		ArrayInsertion.insert(array, 3, 9);
-		int [] expectedArray = {1,5,4,7,2,0,0,0,0,-1};
-		Assert.assertArrayEquals(expectedArray, array);
-	}
-
-	@Test
-	public void PassingArrayInsert2()
-	{
-		int [] array = {1,5,4,7,2,0,0,0,0,0};
-		ArrayInsertion.insert(array, 8, 9);
-		int [] expectedArray = {1,5,4,6,2,0,0,0,0,8};
-		Assert.assertArrayEquals(expectedArray, array);
-	}*/
-//ArrayInsertion.insert(array, 15, 0);
-//ArrayInsertion.insert(array, 25, 1);
-//ArrayInsertion.insert(array, 35, 2);
-//ArrayInsertion.insert(array, 45, 3);   
-
-//}
-//Trying to insert at index that is out of range
-//@Test
-//public void TestInsertWithNegitiveCase(){
-//int[] array = new int[5];
-//ArrayInsertion.insert(array, 15, 5);   
+	
 
 }

@@ -3,25 +3,51 @@ import org.junit.Test;
 
 public class LinkedList2Test 
 {
-
-  
-	//test case will pass
+	LinkedList2 list;
+	@Before
+	public void BeforeTest()
+	{
+		 list = new LinkedList2();
+	}
+	
     @Test
-    public void testSizeLinkedList()
+    public void ValidTestCase1()
     {
-            LinkedList2 list = new LinkedList2();
-            list.add(1);
-            Assert.assertNotNull(list.size());// length of linked list should be 1
+            list.add(5);
+            Assert.assertNotNull(list.size());
     }
     
-    //test case will fail
     @Test
-    public void testAddLinkedList() throws Exception
+    public void InvalidTestCase1() throws Exception
     {
-            LinkedList2 list1 = new LinkedList2();
-            list1.add(1);
-            list1.add(2);
-            list1.popFront();
-            Assert.assertEquals(2, list1.size());// length of linked list should be 1
+            list.add(5);
+            list.add(10);
+            list.popFront();
+            Assert.assertEquals(2, list.size());
+    }
+    
+    @Test
+    public void ValidTestCase2() throws Exception
+    {
+            list.pushFront(50);
+            Assert.assertEquals(list.topFront(), 50);
+    }
+    
+    @Test
+    public void ValidTestCase3() throws Exception
+    {
+            list.pushFront(50);
+            list.pushFront(100);
+            list.pushBack(150);
+            list.popFront();
+            Assert.assertEquals(list.topBack() , 150);
+    }
+    
+    @Test
+    public void InvalidTestCase3() throws Exception
+    {
+            list.add(200);
+            // size should be 5 but we will fail the test
+            Assert.assertEquals(2, list.size());
     }
 }

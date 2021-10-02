@@ -10,33 +10,33 @@ public class LinkedListSwapCodeTest
 	 {
              LinkedListSwapCode.pushFront(10);
              LinkedListSwapCode.pushBack(20);
-             LinkedListSwapCode.pushFront(5);
+             LinkedListSwapCode.pushFront(30);
      }
 
      @Test
-     public void testCase1()
+     public void PassTestCase1()
      {
-             Assert.assertEquals(LinkedListSwapCode.head.key, 5);
+             Assert.assertEquals(LinkedListSwapCode.head.key, 30);
      }
 
 
      @Test
-     public void testCase2()
+     public void PassTestCase2()
      {
     	 	 LinkedListSwapCode.swap();
              Assert.assertEquals(LinkedListSwapCode.head.key, 20);
      }
 
      @Test
-     public void testCase3()
+     public void PassTestCase3()
      {
-    	 	 LinkedListSwapCode.pushBack(30);
+    	 	 LinkedListSwapCode.pushBack(100);
     	 	 LinkedListSwapCode.swap();
-             Assert.assertEquals(LinkedListSwapCode.head.key, 30);
+             Assert.assertEquals(LinkedListSwapCode.head.key, 100);
      }
      
      @Test
-     public void testCase4()
+     public void FailTestCase1()
      {		// This test case will fail as the correct output is 100
     	 	 LinkedListSwapCode.pushBack(100);
     	 	 LinkedListSwapCode.pushFront(300);
@@ -45,7 +45,7 @@ public class LinkedListSwapCodeTest
      }
      
      @Test
-     public void testCase5()
+     public void FailTestCase2()
      {		// This test case will fail as the correct output is 500
     	 	 LinkedListSwapCode.pushBack(100);
     	 	 LinkedListSwapCode.pushFront(300);

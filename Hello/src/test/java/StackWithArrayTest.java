@@ -17,20 +17,34 @@ public class StackWithArrayTest {
      }
 
      @Test
-     public void testCase1() throws Exception 
+     public void ValidTestCase() throws Exception 
      {
              Assert.assertEquals(stack.top(), 40);
      }
      
      @Test
-     public void testCase2() throws Exception 
+     public void ValidTestCase2() throws Exception 
      {
             Assert. assertEquals(stack.size(), 4);
      }
 
      @Test
-     public void testCase3() throws Exception 
+     public void InvalidTestCase() throws Exception 
      {
-            Assert. assertEquals(stack.size(), 2);
+            Assert. assertEquals(stack.size(), 2);	// as there are 4 elements so the size should be 4
+     }
+     
+     @Test
+     public void ValidTestCase3() throws Exception 
+     {
+    	     stack.pop();
+             Assert.assertEquals(stack.top(), 30);
+     }
+     
+     @Test
+     public void InvalidTestCase3() throws Exception 
+     {
+    	 	stack.push(50);	// as we pushed another element so the top should be 50 but we fail it by placing -1
+            Assert. assertEquals(stack.top(), -1);
      }
 }

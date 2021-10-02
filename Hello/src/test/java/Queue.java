@@ -59,7 +59,7 @@ public class Queue{
 		return false;
 	}
 
-	//function to ge the size of the array.
+	//function to get the size of the array.
 	public int size(){
 		return sizeofQueue;	
 	}

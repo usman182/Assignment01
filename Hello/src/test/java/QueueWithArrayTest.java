@@ -7,7 +7,7 @@ public class QueueWithArrayTest {
     Queue queue = new Queue(10);
 
     @Test
-    public void ValidTestCase() throws Exception 
+    public void PassTestCase() throws Exception 
     {
             queue.enqueue(10);
             queue.enqueue(20);
@@ -16,9 +16,33 @@ public class QueueWithArrayTest {
     
 
     @Test
-    public void InValidTestCase() throws Exception 
+    public void FailTestCase() throws Exception 
     {
             Assert.assertFalse(queue.empty()); 
+    }
+    
+    @Test
+    public void PassTestCase2() throws Exception 
+    {
+            queue.enqueue(11);
+            queue.enqueue(12);
+            queue.dequeue();
+            Assert.assertEquals(queue.dequeue(), 12);
+    }
+    
+    @Test
+    public void FailTestCase2() throws Exception 
+    {
+    		queue.enqueue(13);
+    		queue.enqueue(14);
+            Assert.assertTrue(queue.empty()); 
+    }
+    
+    @Test
+    public void PassTestCase3() throws Exception 
+    {
+    		queue.enqueue(55);
+            Assert.assertEquals(queue.dequeue(), 55);
     }
 
 }

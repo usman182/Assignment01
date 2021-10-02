@@ -1,4 +1,6 @@
 import org.junit.*;
+import org.junit.Test;
+
 
 
 public class ArrayDeleteTest {
@@ -10,7 +12,7 @@ public class ArrayDeleteTest {
 		int IndexToDelete = 3;
 		ArrayDeletion.delete(array, IndexToDelete);
 		int[] expectedArray = {1, 6, 34, 2, 43,-1};
-		Assert.assertArrayEquals("Value at index 3 should be deleted and " + "original array should be affected", expectedArray, array);
+		Assert.assertArrayEquals(expectedArray, array);
 	}
 	
 	@Test
@@ -42,7 +44,7 @@ public class ArrayDeleteTest {
         int indexToDelete = 3;
         ArrayDeletion.delete(array, indexToDelete);
         int expectedArrayLength = array.length - 1;
-        Assert.assertEquals("Array size should reduce by 1 upon deletion", expectedArrayLength, array.length);
+        Assert.assertEquals(expectedArrayLength, array.length);
     }
 	
 	@Test
@@ -75,25 +77,7 @@ public class ArrayDeleteTest {
 		Assert.assertArrayEquals(expectedArray, array);
 	}
 	
-	@Test
-	public void FailingArrayDelete4() 
-	{
-		int[] array = {8, 4, 3, 1, 43, 11};
-		int IndexToDelete = 4;
-		ArrayDeletion.delete(array, IndexToDelete);
-		int[] expectedArray = {8, 4, 3, 1, 11, 43};
-		Assert.assertArrayEquals(expectedArray, array);
-	}
 	
-	@Test
-	public void PassingArrayDelete5() 
-	{
-		int[] array = {1, 2, 3};
-		int IndexToDelete = 1;
-		ArrayDeletion.delete(array, IndexToDelete);
-		int[] expectedArray = {1, 3, -1};
-		Assert.assertArrayEquals(expectedArray, array);
-	}
 	
 	@Test
 	public void FailingArrayDelete5() 

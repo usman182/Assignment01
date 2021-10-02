@@ -14,14 +14,14 @@ public class CircularLinkedListTest {
      }
 
 	@Test
-	public void testCase1() 
+	public void PassingTestCase1() 
 	{
 				Assert.assertEquals(CircularLinkedList.head.key, 5);
 
 	}
 	
 	@Test
-	public void testCase2() 
+	public void PassingTestCase2() 
 	{
 		 		CircularLinkedList.popFront();
 				Assert.assertEquals(CircularLinkedList.head.key , 10);
@@ -29,7 +29,7 @@ public class CircularLinkedListTest {
 	}
 	
 	@Test
-	public void testCase3() 
+	public void PassingTestCase3() 
 	{
 		 		CircularLinkedList.pushBack(50);
 		 		CircularLinkedList.pushFront(60);
@@ -40,7 +40,7 @@ public class CircularLinkedListTest {
 	}
 	
 	 @Test
-     public void testCase4() 
+     public void FailingTestCase1() 
 	 {
 		 CircularLinkedList.popBack();
 		 CircularLinkedList.pushFront(100);
@@ -49,7 +49,7 @@ public class CircularLinkedListTest {
      }
 	 
 	 @Test
-     public void testCase5() 
+     public void FailingTestCase2() 
 	 {
 		 CircularLinkedList.pushFront(40);
 		 // 100 should be in front but we will use 30 to check fail the test
